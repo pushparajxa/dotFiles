@@ -18,6 +18,13 @@ prompt zefram
 ### Add aliases
 alias Tomcat='cd ~/Desktop/Rivigo/TomCat/apache-tomcat-8.0.1'
 alias did="vim +'normal Go' +'r!date' ~/did.txt"
+alias gs="git status"
+alias gpo="git push origin"
+alias gpb="git pull --rebase --autostash"
+alias glog="git log"
+alias gf="git fetch"
+unalias mysql
+unalias mv
 
 bindkey '^Xp' history-beginning-search-backward
 bindkey '^Xn' history-beginning-search-backward
@@ -33,8 +40,8 @@ export DYLD_LIBRARY_PATH="/usr/lib;/Users/pushparaj.motamari/Desktop/ubuntu/gith
 #Add python to the path
 PATH=/Users/pushparaj/Library/Python/2.7/bin:$PATH
 #Add mysql to the path
-PATH=/usr/local/Cellar/mysql/5.7.22/bin:$PATH
-PATH=/usr/local/Cellar/mysql/5.7.22/support-files:$PATH
+PATH=/usr/local/mysql-5.7.23-macos10.13-x86_64/bin:$PATH
+PATH=/usr/local/mysql-5.7.23-macos10.13-x86_64/support-files:$PATH
 #Add mongodb to the path
 PATH=/usr/local/Cellar/mongodb/3.6.4/bin:$PATH
 #Add zook-keeper to the path
@@ -43,6 +50,8 @@ PATH=/usr/local/bin/zkServer:$PATH
 PATH=/Users/pushparaj/Desktop/Rivigo/TomCat/apache-tomcat-8.0.1/bin/:$PATH
 #Adding ack to the classpath
 PATH=/usr/local/bin/ack:$PATH
+#Adding go to the classpath
+PATH=/usr/local/go/bin/:$PATH
 #Export PATH
 export PATH
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
@@ -91,3 +100,16 @@ cd $pw
 echo "done"
 }
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export MANPATH=/opt/local/share/man:$MANPATH
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+## https://github.com/skywind3000/z.lua
+eval "$(lua ~/z.lua/z.lua --init zsh enhanced once)"
+#source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+#
+#
+#
+#FUNCTION definitions
+gck () {
+	git checkout $1
+}
