@@ -60,6 +60,12 @@
 set ignorecase
 set smartcase
 
+" search for a word under cursor
+" You can also use these two keystrokes in NORMAL mode to search the word under the cursor:
+
+" * - Search forward.
+" # - Search backward.
+
 " Wrapping
 " ------------
 " Reference:
