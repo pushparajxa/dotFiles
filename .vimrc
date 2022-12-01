@@ -5,7 +5,20 @@
 
 "execute pathogen#infect()
 
+" Search settings
+" ----------------
+" /search\C ---> Case-sensitive search.
+" /search\c ---> Case-insensitive search
+
+" set ignorecase - All your searches will be case-insensitive.
+" set smartcase - Your search will be case-sensitive if it contains an uppercase letter.
+"  Be aware that ignorecase needs to be set for smartcase to work.
+set ignorecase
+set smartcase
+
+
 " Basic Settings
+" ------------------
 set nocompatible
 set backspace=indent,eol,start
 filetype plugin indent on
@@ -20,7 +33,7 @@ set hlsearch
 set scrolloff=10 "Number of lines below and above the cursor to be shown.
 set autoread
 "Enables mouse use in all modes
-set mouse=a
+set mouse-=a
 "Set this to the name of your terminal that suppots mouse codes.
 set ttymouse=xterm2
 "Send more characters for redraws
