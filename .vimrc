@@ -7,6 +7,8 @@
 
 " Search settings
 " ----------------
+" Referece: https://thevaluable.dev/vim-search-find-replace/
+"
 " /search\C ---> Case-sensitive search.
 " /search\c ---> Case-insensitive search
 
