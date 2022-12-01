@@ -5,6 +5,48 @@
 
 "execute pathogen#infect()
 
+" Move horizantally 
+" --------------------
+" Reference: https://thevaluable.dev/vim-commands-beginner/
+" 
+" f<character> - find a character after your cursor.
+" F<character> - find a character before your cursor.
+" t<character> - move to a character after your cursor.
+" T<character> - move to a character before your cursor.
+
+" After using one of the last four keystrokes, you can move on the 
+" character you’ve chosen with ; to go forward, and , to go backward.
+
+" Movement by sentence
+" --------------------
+" Referece: https://vim.works/2019/03/03/cursor-movement-in-vim/
+"
+" ( moves to the previous beginning of a sentence. ) moves to the next end.
+
+ " Want to Delete everything to the end of the sentence? Combine d with the end of sentence movement d) 
+ " Want to delete the rest of this sentence and the next one? That’s 2 sentences, so preface it with a 2: 2d)
+
+ " See help sentence for the definition of a “sentence” in Vim.
+
+" Movement by paragraph
+" --------------------
+" Referece: https://vim.works/2019/03/03/cursor-movement-in-vim/
+"
+" { moves to line above the paragraph, and } to the bottom.
+
+" This can be combined with verbs and numbers just like sentence movement.
+
+" See help paragraph for the definition of “paragraph” in Vim.
+
+
+" Move Vertically
+" --------------------
+" Reference: https://thevaluable.dev/vim-commands-beginner/
+"
+" CTRL-e - scroll the window downwards.
+" CTRL-u - move your cursor upward half a screen.
+" CTRL-d - move your cursordownward half a screen.
+
 " Search settings
 " ----------------
 " Referece: https://thevaluable.dev/vim-search-find-replace/
