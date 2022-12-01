@@ -60,6 +60,24 @@
 set ignorecase
 set smartcase
 
+" Wrapping
+" ------------
+" Reference:
+"
+" In every other editor I’ve encountered, when you hit the end of a line, and then move your cursor one more character 
+" to the right it will wrap around to the start of the next line. When you move it to the start and then go back one 
+" more character it will wrap around to the end of the previous line.
+
+" Vim does not do this, by default. Let’s fix that. Add the following line to your .vimrc
+
+set whichwrap=<,>,h,l
+
+" What exactly does that do? Well, whichwrap is a way to tell Vim which keys wrap.
+" < and > (in this context) mean the left and right arrow keys. h, and l are our left 
+" and right character motion commands. So, this command tells vim that <,>,h,l are the keys 
+" which will wrap. The order isn’t important, and the reference docs don’t recommend including 
+" h and l but I don’t like inconsistent behavior, so I include them.
+
 
 " Basic Settings
 " ------------------
